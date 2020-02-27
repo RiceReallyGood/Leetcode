@@ -1,18 +1,10 @@
 #include <vector>
-#include <string>
-#include <map>
-#include <climits>
-#include <algorithm>
-#include <set>
 #include <queue>
-#include <unordered_map>
-#include <unordered_set>
-#include <cmath>
 using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> pacificAtlantic(vector<vector<int>>& matrix) {
+    vector<vector<int>> pacificAtlantic(vector<vector<int>>& matrix) { // BFS
         if(matrix.empty() || matrix[0].empty()) return vector<vector<int>>();
         m = matrix.size();
         n = matrix[0].size();
@@ -68,5 +60,40 @@ private:
                 rslt[index.first][index.second + 1] = true;
             }
         }
+    }
+};
+
+class Solution {
+public:
+    vector<vector<int>> pacificAtlantic(vector<vector<int>>& matrix) { //DFS
+        if(matrix.empty() || matrix[0].empty()) return vector<vector<int>>();
+        m = matrix.size();
+        n = matrix[0].size();
+        vector<vector<bool>> CanFlow2Pacific(m, vector<bool>(n, false));
+        vector<vector<bool>> CanFlow2Atlantic(m, vector<bool>(n, false));
+        for(int j = 0; j < n; j++) dfs(0, j, matrix, CanFlow2Pacific);
+        for(int i = 1; i < m; i++) dfs(i, 0, matrix, CanFlow2Pacific);
+        for(int j = 0; j < n; j++) dfs(m - 1, j, matrix, CanFlow2Atlantic);
+        for(int i = 0; i < m - 1; i++) dfs(i, n - 1, matrix, CanFlow2Atlantic);
+        vector<vector<int>> ret;
+        for(int i = 0; i < m; i++)
+            for(int j = 0; j < n; j++)
+                if(CanFlow2Pacific[i][j] && CanFlow2Atlantic[i][j])
+                    ret.push_back({i, j});
+        return ret;
+    }
+
+private:
+    int m, n;
+    void dfs(int i, int j, vector<vector<int>>& matrix, vector<vector<bool>>& rslt){
+        rslt[i][j] = true;
+        if(i > 0 && matrix[i - 1][j] >= matrix[i][j] && !rslt[i - 1][j])
+            dfs(i - 1, j, matrix, rslt);
+        if(i < m - 1 && matrix[i + 1][j] >= matrix[i][j] && !rslt[i + 1][j])
+            dfs(i + 1, j, matrix, rslt);
+        if(j > 0 && matrix[i][j - 1] >= matrix[i][j] && !rslt[i][j - 1])
+            dfs(i, j - 1, matrix, rslt);
+        if(j < n - 1 && matrix[i][j + 1] >= matrix[i][j] && !rslt[i][j + 1])
+            dfs(i, j + 1, matrix, rslt);
     }
 };
