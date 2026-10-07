@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(LeetCode)
+
+add_executable(1_Two_Sum 1_Two_Sum.cpp 1_Two_Sum.h)
+add_executable(49_Group_Anagrams 49_Group_Anagrams.cpp 49_Group_Anagrams.h)
+add_executable(128_Longest_Consecutive_Sequence 128_Longest_Consecutive_Sequence.cpp 128_Longest_Consecutive_Sequence.h)
+add_executable(283_Move_Zeroes 283_Move_Zeroes.cpp 283_Move_Zeroes.h)
+add_executable(11_Container_With_Most_Water 11_Container_With_Most_Water.cpp 11_Container_With_Most_Water.h)
