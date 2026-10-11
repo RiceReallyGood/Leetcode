@@ -14,3 +14,4 @@ add_executable(560_Subarray_Sum_Equals_K 560_Subarray_Sum_Equals_K.cpp 560_Subar
 add_executable(239_Sliding_Window_Maximum 239_Sliding_Window_Maximum.cpp 239_Sliding_Window_Maximum.h)
 add_executable(76_Minimum_Window_Substring 76_Minimum_Window_Substring.cpp 76_Minimum_Window_Substring.h)
 add_executable(53_Maximum_Subarray 53_Maximum_Subarray.cpp 53_Maximum_Subarray.h)
+add_executable(56_Merge_Intervals 56_Merge_Intervals.cpp 56_Merge_Intervals.h)
