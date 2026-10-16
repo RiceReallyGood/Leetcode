@@ -22,3 +22,4 @@ add_executable(73_Set_Matrix_Zeros 73_Set_Matrix_Zeros.cpp 73_Set_Matrix_Zeros.h
 add_executable(287_Find_the_Duplicate_Number 287_Find_the_Duplicate_Number.cpp 287_Find_the_Duplicate_Number.h)
 add_executable(136_Single_Number 136_Single_Number.cpp 136_Single_Number.h)
 add_executable(169_Majority_Element 169_Majority_Element.cpp 169_Majority_Element.h)
+add_executable(75_Sort_Colors 75_Sort_Colors.h 75_Sort_Colors.cpp)
