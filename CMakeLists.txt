@@ -23,3 +23,4 @@ add_executable(287_Find_the_Duplicate_Number 287_Find_the_Duplicate_Number.cpp 2
 add_executable(136_Single_Number 136_Single_Number.cpp 136_Single_Number.h)
 add_executable(169_Majority_Element 169_Majority_Element.cpp 169_Majority_Element.h)
 add_executable(75_Sort_Colors 75_Sort_Colors.h 75_Sort_Colors.cpp)
+add_executable(31_Next_Permutation 31_Next_Permutation.cpp 31_Next_Permutation.h)
