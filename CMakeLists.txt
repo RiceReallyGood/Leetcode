@@ -25,3 +25,4 @@ add_executable(169_Majority_Element 169_Majority_Element.cpp 169_Majority_Elemen
 add_executable(75_Sort_Colors 75_Sort_Colors.h 75_Sort_Colors.cpp)
 add_executable(31_Next_Permutation 31_Next_Permutation.cpp 31_Next_Permutation.h)
 add_executable(54_Spiral_Matrix 54_Spiral_Matrix.cpp 54_Spiral_Matrix.h)
+add_executable(48_Rotate_Image 48_Rotate_Image.cpp 48_Rotate_Image.h)
