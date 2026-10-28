@@ -27,3 +27,4 @@ add_executable(31_Next_Permutation 31_Next_Permutation.cpp 31_Next_Permutation.h
 add_executable(54_Spiral_Matrix 54_Spiral_Matrix.cpp 54_Spiral_Matrix.h)
 add_executable(48_Rotate_Image 48_Rotate_Image.cpp 48_Rotate_Image.h)
 add_executable(240_Search_a_2D_Matrix_II 240_Search_a_2D_Matrix_II.cpp 240_Search_a_2D_Matrix_II.h)
+add_executable(307_Range_Sum_Query-Mutable 307_Range_Sum_Query-Mutable.cpp 307_Range_Sum_Query-Mutable.h)
